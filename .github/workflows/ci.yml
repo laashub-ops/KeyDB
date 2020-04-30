@@ -23,7 +23,7 @@ jobs:
     - name: cluster-test
       run: |
         ./runtest-cluster
-    -name: build-deb-pkg
+    - name: build-deb-pkg
       run: |
         working-directory: ./pkg/deb/
         sudo ./deb-builder.sh
