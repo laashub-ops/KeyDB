@@ -25,7 +25,7 @@ jobs:
         ./runtest-cluster
     -name: build-deb-pkg
       run: |
-        cd ./pkg/deb
+        working-directory: ./pkg/deb/
         sudo ./deb-builder.sh
     - name: upload-deb-keydb-tools
       uses: actions/upload-artifact@v1
