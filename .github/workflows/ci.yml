@@ -23,15 +23,6 @@ jobs:
     - name: cluster-test
       run: |
         ./runtest-cluster
-    - name: build-deb-pkg
-      working-directory: ./pkg/deb
-      run: |
-        sudo ./deb-builder.sh
-    - name: upload-deb-keydb-tools
-      uses: actions/upload-artifact@v1
-      with:
-        name: keydb-tools_0.0.0-1chl1~bionic1_amd64.deb
-        path: pkg/deb/deb_files_generated/keydb-tools_0.0.0-1chl1~bionic1_amd64.deb   
 
   test-ubuntu-arm:
     runs-on: [self-hosted, linux, arm]
